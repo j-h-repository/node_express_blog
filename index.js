@@ -16,7 +16,7 @@ mongoose.connect(process.env.DATABASE)
 app.use(express.json({limit:"5mb"}));
 app.use(express.urlencoded({extended:true}));
 app.use(cors({
-	origin:[process.env.FRONT_END]
+	origin:process.env.FRONT_END
 }))
 
 //post request for registering the user
